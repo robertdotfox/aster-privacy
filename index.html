@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aster — Privacy Policy</title>
+<meta name="description" content="Privacy policy for Aster, a contemplative AI companion. No backend, no analytics, no ads — your data stays encrypted on your device.">
+<style>
+  :root { color-scheme: dark; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: #0b0b0d;
+    color: #e7e7ea;
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  main { max-width: 720px; margin: 0 auto; padding: 56px 24px 96px; }
+  h1 { font-size: 2rem; margin: 0 0 4px; letter-spacing: -0.01em; }
+  .eff { color: #9a9aa2; font-size: 0.9rem; margin: 0 0 8px; }
+  h2 { font-size: 1.2rem; margin: 40px 0 10px; letter-spacing: -0.01em; }
+  h3 { font-size: 1rem; margin: 22px 0 6px; color: #cfcfd6; }
+  p, li { color: #d4d4da; }
+  a { color: #b8a6f0; text-decoration: none; border-bottom: 1px solid rgba(184,166,240,0.35); }
+  a:hover { border-bottom-color: #b8a6f0; }
+  ul { padding-left: 1.2em; }
+  li { margin: 4px 0; }
+  .lead {
+    font-size: 1.05rem; color: #e7e7ea;
+    background: rgba(184,166,240,0.07);
+    border: 1px solid rgba(184,166,240,0.18);
+    border-radius: 10px; padding: 16px 18px; margin: 18px 0 8px;
+  }
+  hr { border: none; border-top: 1px solid #26262b; margin: 40px 0; }
+  footer { color: #8a8a92; font-size: 0.85rem; margin-top: 48px; }
+  strong { color: #f1f1f4; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Aster — Privacy Policy</h1>
+  <p class="eff">Effective date: June 25, 2026</p>
+
+  <p>Aster is a contemplative AI companion app for iOS, macOS, and Android. This
+  policy explains what Aster does, and does not do, with your information.</p>
+
+  <p class="lead">The short version: Aster has <strong>no backend of its own</strong>,
+  <strong>no account</strong>, <strong>no analytics</strong>, and <strong>no ads</strong>.
+  Your conversations and memories stay <strong>encrypted on your device</strong>. The only
+  data that leaves your device is the request sent to <strong>Anthropic</strong> to generate
+  each reply.</p>
+
+  <h2>Who this covers</h2>
+  <p>This policy applies to the Aster mobile and desktop apps (“Aster”, “the app”,
+  “we”), developed and operated by an independent developer (contact below).</p>
+
+  <h2>What information Aster handles</h2>
+
+  <h3>Information you provide</h3>
+  <ul>
+    <li><strong>Your messages</strong> — what you type to Aster.</li>
+    <li><strong>Your Anthropic API key</strong> (iOS and Android) — you paste your own key.
+    It is stored encrypted in the device’s secure keystore (iOS Keychain / Android Keystore)
+    and is used only to authenticate your requests to Anthropic. On macOS, Aster can instead
+    use your existing Claude subscription through Anthropic’s official command-line client; in
+    that case Aster never sees your password or token.</li>
+  </ul>
+
+  <h3>Information Aster creates on your device</h3>
+  <ul>
+    <li><strong>Memories</strong> — when you share something durable, Aster may save a short
+    memory to keep context across conversations. Memories live <strong>only on your device</strong>,
+    encrypted with AES-GCM under a key held in the device’s secure keystore. The text of your
+    memories is never uploaded to be indexed; the similarity embeddings used to retrieve them are
+    computed locally on the device.</li>
+    <li><strong>Conversation history and state</strong> — stored encrypted on the device so your
+    conversations persist between sessions.</li>
+  </ul>
+
+  <p>You can view, edit, delete, or erase all of this at any time inside the app
+  (the Memory tab, and Settings → “Erase all local data”).</p>
+
+  <h2>What is sent over the network, and to whom</h2>
+  <p>To generate each reply, Aster sends a single request to <strong>Anthropic’s Messages
+  API</strong> containing the prompt assembled for that turn: your message, any memories matched
+  to the conversation, the current conversation state, and Aster’s built-in governance
+  instructions. <strong>Nothing else is transmitted.</strong></p>
+
+  <p>That request goes to <strong>Anthropic, PBC</strong>, which processes it under its own terms.
+  Because you use your own API key (or subscription), your conversations are handled under your
+  relationship with Anthropic — please review their policies:</p>
+  <ul>
+    <li><a href="https://www.anthropic.com/legal/privacy">Anthropic Privacy Policy</a></li>
+    <li><a href="https://www.anthropic.com/legal/aup">Anthropic Usage Policies</a></li>
+  </ul>
+
+  <p>Aster sends <strong>no</strong> data to the developer or to any third party other than
+  Anthropic. There are no analytics SDKs, advertising networks, or crash-reporting services in
+  the app.</p>
+
+  <h2>What Aster does NOT do</h2>
+  <ul>
+    <li>No advertising and no advertising identifiers.</li>
+    <li>No sale or sharing of your personal data.</li>
+    <li>No analytics, telemetry, behavioral tracking, or crash reporting.</li>
+    <li>No accounts, no email collection, no access to your contacts.</li>
+    <li>No notifications designed to pull you back.</li>
+  </ul>
+
+  <h2>Data retention and deletion</h2>
+  <ul>
+    <li>Memories, conversation history, and your API key remain on your device until you remove
+    them. Uninstalling the app, or using Settings → “Erase all local data,” removes Aster’s
+    on-device data. (Erasing local data leaves your Anthropic API key in the Keychain/Keystore
+    unless you choose to clear it.)</li>
+    <li>Data submitted to Anthropic is retained according to Anthropic’s policies, not ours — we
+    keep no copy.</li>
+  </ul>
+
+  <h2>Children’s privacy</h2>
+  <p>Aster is not directed to children under 13 (or the minimum age of digital consent in your
+  jurisdiction) and does not knowingly collect personal information from them.</p>
+
+  <h2>Security</h2>
+  <p>On-device data is encrypted (AES-GCM) with keys held in the platform secure keystore
+  (iOS Keychain / Android Keystore). Requests to Anthropic use HTTPS. No safeguard is perfect,
+  but Aster minimizes risk by keeping your data on your device and collecting nothing centrally.</p>
+
+  <h2>Your choices and rights</h2>
+  <p>Because Aster stores your data on your device and we hold none of it, you control it
+  directly — read, edit, and delete it within the app at any time. For data you have sent to
+  Anthropic, exercise your rights through Anthropic per their privacy policy.</p>
+
+  <h2>Changes to this policy</h2>
+  <p>We may update this policy as the app evolves. Material changes will be reflected here with a
+  new effective date.</p>
+
+  <h2>Contact</h2>
+  <p>Questions, requests, or concerns: <a href="mailto:robertdotfox@gmail.com">robertdotfox@gmail.com</a></p>
+
+  <footer>Aster — a contemplative AI companion. This page is the official privacy policy for the Aster apps.</footer>
+</main>
+</body>
+</html>
