@@ -1,12 +1,12 @@
 # Aster — Privacy Policy
 
-**Effective date: June 25, 2026**
+**Effective date: June 27, 2026**
 
 > Live page: **https://robertdotfox.github.io/aster-privacy/**
 
 Aster is a contemplative AI companion app for iOS, macOS, and Android. This policy explains what Aster does, and does not do, with your information.
 
-**The short version:** Aster has **no backend of its own**, **no account**, **no analytics**, and **no ads**. Your conversations and memories stay **encrypted on your device**. The only data that leaves your device is the request sent to **Anthropic** to generate each reply.
+**The short version:** Aster has **no account**, **no analytics**, and **no ads**. Your conversations and memories stay **encrypted on your device**. To generate each reply, your message is sent to **Anthropic's Claude** — on phones, by way of **Aster's own relay service**, which forwards it and does not store it; on macOS, through your own Claude subscription. Nothing else leaves your device.
 
 ## Who this covers
 This policy applies to the Aster mobile and desktop apps ("Aster", "the app", "we"), developed and operated by an independent developer (contact below).
@@ -15,7 +15,7 @@ This policy applies to the Aster mobile and desktop apps ("Aster", "the app", "w
 
 ### Information you provide
 - **Your messages** — what you type to Aster.
-- **Your Anthropic API key** (iOS and Android) — you paste your own key. It is stored encrypted in the device's secure keystore (iOS Keychain / Android Keystore) and is used only to authenticate your requests to Anthropic. On macOS, Aster can instead use your existing Claude subscription through Anthropic's official command-line client; in that case Aster never sees your password or token.
+- **Authentication to Claude** — On iPhone and Android you don't provide any key or account: Aster's relay service holds the connection to Anthropic on your behalf. On macOS, Aster uses your existing Claude subscription through Anthropic's official command-line client, and never sees your password or token.
 
 ### Information Aster creates on your device
 - **Memories** — when you share something durable, Aster may save a short memory to keep context across conversations. Memories live **only on your device**, encrypted with AES-GCM under a key held in the device's secure keystore. The text of your memories is never uploaded to be indexed; the similarity embeddings used to retrieve them are computed locally on the device.
@@ -24,14 +24,18 @@ This policy applies to the Aster mobile and desktop apps ("Aster", "the app", "w
 You can view, edit, delete, or erase all of this at any time inside the app (the Memory tab, and Settings → "Erase all local data").
 
 ## What is sent over the network, and to whom
-To generate each reply, Aster sends a single request to **Anthropic's Messages API** containing the prompt assembled for that turn: your message, any memories matched to the conversation, the current conversation state, and Aster's built-in governance instructions. **Nothing else is transmitted.**
+To generate each reply, Aster transmits the prompt assembled for that turn: your message, any memories matched to the conversation, the current conversation state, and Aster's built-in governance instructions. **Nothing else is transmitted** — no telemetry, no analytics, no advertising or tracking identifiers.
 
-That request goes to **Anthropic, PBC**, which processes it under its own terms. Because you use your own API key (or subscription), your conversations are handled under your relationship with Anthropic — please review their policies:
+**On iPhone and Android,** that prompt is sent to **Aster's relay service** — a small server operated by Aster's developer and hosted on **Cloudflare** — which forwards it to **Anthropic, PBC** to produce the reply and streams the reply back to your device. The relay exists so you don't need your own Anthropic account or key; it passes your prompt straight through and **does not store the content of your messages or replies** (it keeps only minimal, non-content counters used to prevent abuse). Cloudflare transports this traffic as the hosting provider.
+
+**On macOS,** Aster talks to Anthropic through your own Claude subscription via Anthropic's command-line client; there is no Aster relay in that path.
+
+In every case the prompt is processed by **Anthropic, PBC** under its own terms — please review their policies:
 
 - [Anthropic Privacy Policy](https://www.anthropic.com/legal/privacy)
 - [Anthropic Usage Policies](https://www.anthropic.com/legal/aup)
 
-Aster sends **no** data to the developer or to any third party other than Anthropic. There are no analytics SDKs, advertising networks, or crash-reporting services in the app.
+Aster runs no analytics SDKs, advertising networks, or crash-reporting services, and does not sell or share your data. Apart from the relay — which only forwards your prompt to Anthropic and retains no message content — Aster sends your data to no other third party.
 
 ## What Aster does NOT do
 - No advertising and no advertising identifiers.
