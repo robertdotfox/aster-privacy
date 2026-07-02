@@ -1,12 +1,12 @@
 # Aster — Privacy Policy
 
-**Effective date: June 27, 2026**
+**Effective date: July 2, 2026**
 
 > Live page: **https://robertdotfox.github.io/aster-privacy/**
 
 Aster is a contemplative AI companion app for iOS, macOS, and Android. This policy explains what Aster does, and does not do, with your information.
 
-**The short version:** Aster has **no account**, **no analytics**, and **no ads**. Your conversations and memories stay **encrypted on your device**. To generate each reply, your message is sent to **Anthropic's Claude** — on phones, by way of **Aster's own relay service**, which forwards it and does not store it; on macOS, through your own Claude subscription. Nothing else leaves your device.
+**The short version:** Aster has **no account**, **no ads**, and **no third-party analytics or cross-app tracking**. Your conversations and memories stay **encrypted on your device**. To generate each reply, your message is sent to **Anthropic's Claude** — on phones, by way of **Aster's own relay service**, which forwards it and does not store it; on macOS, through your own Claude subscription. Nothing else leaves your device.
 
 ## Who this covers
 This policy applies to the Aster mobile and desktop apps ("Aster", "the app", "we"), developed and operated by an independent developer (contact below).
@@ -24,9 +24,9 @@ This policy applies to the Aster mobile and desktop apps ("Aster", "the app", "w
 You can view, edit, delete, or erase all of this at any time inside the app (the Memory tab, and Settings → "Erase all local data").
 
 ## What is sent over the network, and to whom
-To generate each reply, Aster transmits the prompt assembled for that turn: your message, any memories matched to the conversation, the current conversation state, and Aster's built-in governance instructions. **Nothing else is transmitted** — no telemetry, no analytics, no advertising or tracking identifiers.
+To generate each reply, Aster transmits the prompt assembled for that turn: your message, any memories matched to the conversation, the current conversation state, and Aster's built-in governance instructions. **Nothing else is transmitted** — no advertising, no cross-app tracking, no third-party analytics.
 
-**On iPhone and Android,** that prompt is sent to **Aster's relay service** — a small server operated by Aster's developer and hosted on **Cloudflare** — which forwards it to **Anthropic, PBC** to produce the reply and streams the reply back to your device. The relay exists so you don't need your own Anthropic account or key; it passes your prompt straight through and **does not store the content of your messages or replies** (it keeps only minimal, non-content counters used to prevent abuse). Cloudflare transports this traffic as the hosting provider.
+**On iPhone and Android,** that prompt is sent to **Aster's relay service** — a small server operated by Aster's developer and hosted on **Cloudflare** — which forwards it to **Anthropic, PBC** to produce the reply and streams the reply back to your device. The relay exists so you don't need your own Anthropic account or key; it passes your prompt straight through and **does not store the content of your messages or replies**. To prevent abuse and gauge load it keeps only minimal, non-content first-party counters — aggregate request volume, plus a **per-install identifier** (on iOS via Apple's App Attest; on Android a random, resettable install ID) used to monitor and limit per-device usage. These hold no message content and are never sold or shared. Cloudflare transports this traffic as the hosting provider.
 
 **On macOS,** Aster talks to Anthropic through your own Claude subscription via Anthropic's command-line client; there is no Aster relay in that path.
 
@@ -40,7 +40,7 @@ Aster runs no analytics SDKs, advertising networks, or crash-reporting services,
 ## What Aster does NOT do
 - No advertising and no advertising identifiers.
 - No sale or sharing of your personal data.
-- No analytics, telemetry, behavioral tracking, or crash reporting.
+- No third-party analytics SDKs, no advertising or cross-app tracking identifiers, no behavioral profiling, no crash reporting. (Only the first-party abuse-prevention counters described above.)
 - No accounts, no email collection, no access to your contacts.
 - No notifications designed to pull you back.
 

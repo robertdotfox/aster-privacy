@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Aster — Privacy Policy</title>
-<meta name="description" content="Privacy policy for Aster, a contemplative AI companion. No backend, no analytics, no ads — your data stays encrypted on your device.">
+<meta name="description" content="Privacy policy for Aster, a contemplative AI companion. No ads, no third-party analytics, no cross-app tracking — your data stays encrypted on your device.">
 <style>
   :root { color-scheme: dark; }
   * { box-sizing: border-box; }
@@ -39,13 +39,13 @@
 <body>
 <main>
   <h1>Aster — Privacy Policy</h1>
-  <p class="eff">Effective date: June 27, 2026</p>
+  <p class="eff">Effective date: July 2, 2026</p>
 
   <p>Aster is a contemplative AI companion app for iOS, macOS, and Android. This
   policy explains what Aster does, and does not do, with your information.</p>
 
-  <p class="lead">The short version: Aster has <strong>no account</strong>, <strong>no
-  analytics</strong>, and <strong>no ads</strong>. Your conversations and memories stay
+  <p class="lead">The short version: Aster has <strong>no account</strong>, <strong>no ads</strong>,
+  and <strong>no third-party analytics or cross-app tracking</strong>. Your conversations and memories stay
   <strong>encrypted on your device</strong>. To generate each reply, your message is sent to
   <strong>Anthropic’s Claude</strong> — on phones, by way of <strong>Aster’s own relay
   service</strong>, which forwards it and does not store it; on macOS, through your own Claude
@@ -83,16 +83,19 @@
   <h2>What is sent over the network, and to whom</h2>
   <p>To generate each reply, Aster transmits the prompt assembled for that turn: your message, any
   memories matched to the conversation, the current conversation state, and Aster’s built-in
-  governance instructions. <strong>Nothing else is transmitted</strong> — no telemetry, no
-  analytics, no advertising or tracking identifiers.</p>
+  governance instructions. <strong>Nothing else is transmitted</strong> — no advertising, no
+  cross-app tracking, no third-party analytics.</p>
 
   <p><strong>On iPhone and Android,</strong> that prompt is sent to <strong>Aster’s relay
   service</strong> — a small server operated by Aster’s developer and hosted on
   <strong>Cloudflare</strong> — which forwards it to <strong>Anthropic, PBC</strong> to produce the
   reply and streams the reply back to your device. The relay exists so you don’t need your own
   Anthropic account or key; it passes your prompt straight through and <strong>does not store the
-  content of your messages or replies</strong> (it keeps only minimal, non-content counters used to
-  prevent abuse). Cloudflare transports this traffic as the hosting provider.</p>
+  content of your messages or replies</strong>. To prevent abuse and gauge load it keeps only
+  minimal, non-content first-party counters — aggregate request volume, plus a
+  <strong>per-install identifier</strong> (on iOS via Apple’s App Attest; on Android a random,
+  resettable install ID) used to monitor and limit per-device usage. These hold no message content
+  and are never sold or shared. Cloudflare transports this traffic as the hosting provider.</p>
 
   <p><strong>On macOS,</strong> Aster talks to Anthropic through your own Claude subscription via
   Anthropic’s command-line client; there is no Aster relay in that path.</p>
@@ -112,7 +115,7 @@
   <ul>
     <li>No advertising and no advertising identifiers.</li>
     <li>No sale or sharing of your personal data.</li>
-    <li>No analytics, telemetry, behavioral tracking, or crash reporting.</li>
+    <li>No third-party analytics SDKs, no advertising or cross-app tracking identifiers, no behavioral profiling, no crash reporting. (Only the first-party abuse-prevention counters described above.)</li>
     <li>No accounts, no email collection, no access to your contacts.</li>
     <li>No notifications designed to pull you back.</li>
   </ul>
