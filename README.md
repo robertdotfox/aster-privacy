@@ -40,7 +40,9 @@ and no user, device, or session identifier of any kind** — the relay folds eac
 report into daily fleet-wide totals and discards the individual report. These
 reports exist so Aster's built-in quality standards can be tuned for everyone
 without anyone's conversations leaving their device. The macOS app sends no
-quality reports at all.
+quality reports at all, and **devices in the EU/EEA, the United Kingdom, and
+Switzerland send none either** — Aster asks for no consent there, so it sends
+nothing.
 
 In every case the prompt is processed by **Anthropic, PBC** under its own terms — please review their policies:
 
@@ -59,6 +61,12 @@ Aster runs no third-party analytics SDKs, advertising networks, or crash-reporti
 ## Data retention and deletion
 - Memories, conversation history, and your API key remain on your device until you remove them. Uninstalling the app, or using Settings → "Erase all local data," removes Aster's on-device data. (Erasing local data leaves your Anthropic API key in the Keychain/Keystore unless you choose to clear it.)
 - Data submitted to Anthropic is retained according to Anthropic's policies, not ours — we keep no copy.
+
+## For users in the EEA, the UK, and Switzerland
+- Your messages and the per-turn prompt are processed because they are **necessary to provide the service you request** (generating Aster's replies).
+- The minimal abuse-prevention counters and per-install identifier are processed under **legitimate interest** (keeping the relay available and preventing abuse); they contain no message content and are never used for profiling.
+- **No quality reports are sent from these regions** — no analytics of any kind leaves your device, and Aster shows no consent banners because there is nothing to consent to.
+- You can exercise your rights (access, deletion, objection) directly: your data lives on your device under your control, and for anything sent to Anthropic, through Anthropic per its privacy policy. For anything else, contact us below.
 
 ## Children's privacy
 Aster is not directed to children under 13 (or the minimum age of digital consent in your jurisdiction) and does not knowingly collect personal information from them.
