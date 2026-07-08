@@ -39,7 +39,7 @@
 <body>
 <main>
   <h1>Aster — Privacy Policy</h1>
-  <p class="eff">Effective date: July 2, 2026</p>
+  <p class="eff">Effective date: July 8, 2026</p>
 
   <p>Aster is a contemplative AI companion app for iOS, macOS, and Android. This
   policy explains what Aster does, and does not do, with your information.</p>
@@ -49,7 +49,9 @@
   <strong>encrypted on your device</strong>. To generate each reply, your message is sent to
   <strong>Anthropic’s Claude</strong> — on phones, by way of <strong>Aster’s own relay
   service</strong>, which forwards it and does not store it; on macOS, through your own Claude
-  subscription. Nothing else leaves your device.</p>
+  subscription. On phones, Aster also sends one <strong>anonymous quality report</strong> per
+  conversation — numbers only, never your words, and nothing that can identify you. Nothing else
+  leaves your device.</p>
 
   <h2>Who this covers</h2>
   <p>This policy applies to the Aster mobile and desktop apps (“Aster”, “the app”,
@@ -83,8 +85,9 @@
   <h2>What is sent over the network, and to whom</h2>
   <p>To generate each reply, Aster transmits the prompt assembled for that turn: your message, any
   memories matched to the conversation, the current conversation state, and Aster’s built-in
-  governance instructions. <strong>Nothing else is transmitted</strong> — no advertising, no
-  cross-app tracking, no third-party analytics.</p>
+  governance instructions. Apart from that — and the anonymous quality reports described below —
+  <strong>nothing else is transmitted</strong>: no advertising, no cross-app tracking, no
+  third-party analytics.</p>
 
   <p><strong>On iPhone and Android,</strong> that prompt is sent to <strong>Aster’s relay
   service</strong> — a small server operated by Aster’s developer and hosted on
@@ -100,6 +103,17 @@
   <p><strong>On macOS,</strong> Aster talks to Anthropic through your own Claude subscription via
   Anthropic’s command-line client; there is no Aster relay in that path.</p>
 
+  <h3>Anonymous quality reports (phones only)</h3>
+  <p>When a conversation ends, the iPhone and Android apps send <strong>one small anonymous
+  quality report</strong> to Aster’s relay: numeric quality scores (statistically noised on the
+  device before sending), category counts (such as how many turns were flagged as misread), a
+  bucketed conversation length, the app version, and the governance-build hash. <strong>It never
+  contains a word of what you or Aster said, and no user, device, or session identifier of any
+  kind</strong> — the relay folds each report into daily fleet-wide totals and discards the
+  individual report. These reports exist so Aster’s built-in quality standards can be tuned for
+  everyone without anyone’s conversations leaving their device. The macOS app sends no quality
+  reports at all.</p>
+
   <p>In every case the prompt is processed by <strong>Anthropic, PBC</strong> under its own terms —
   please review:</p>
   <ul>
@@ -107,15 +121,19 @@
     <li><a href="https://www.anthropic.com/legal/aup">Anthropic Usage Policies</a></li>
   </ul>
 
-  <p>Aster runs no analytics SDKs, advertising networks, or crash-reporting services, and does not
-  sell or share your data. Apart from the relay — which only forwards your prompt to Anthropic and
-  retains no message content — Aster sends your data to no other third party.</p>
+  <p>Aster runs no third-party analytics SDKs, advertising networks, or crash-reporting services,
+  and does not sell or share your data. Apart from the relay — which only forwards your prompt to
+  Anthropic, retains no message content, and keeps quality reports only as anonymous aggregates —
+  Aster sends your data to no other third party.</p>
 
   <h2>What Aster does NOT do</h2>
   <ul>
     <li>No advertising and no advertising identifiers.</li>
     <li>No sale or sharing of your personal data.</li>
-    <li>No third-party analytics SDKs, no advertising or cross-app tracking identifiers, no behavioral profiling, no crash reporting. (Only the first-party abuse-prevention counters described above.)</li>
+    <li>No third-party analytics SDKs, no advertising or cross-app tracking identifiers, no
+    behavioral profiling, no crash reporting. The only first-party measurements are the
+    abuse-prevention counters and the anonymous quality reports described above — numbers only,
+    never your words, never linkable to you.</li>
     <li>No accounts, no email collection, no access to your contacts.</li>
     <li>No notifications designed to pull you back.</li>
   </ul>
